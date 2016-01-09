@@ -1,0 +1,35 @@
+\documentclass[twoside,11pt,openany]{book}
+
+\usepackage{nudi}
+\usepackage{amsmath}
+\usepackage{txfonts,multicol,array,multirow,cancel}
+\setlength{\columnsep}{.7cm}
+
+
+\usepackage[papersize={180mm,240mm},textheight=215mm,textwidth=105mm,
+topmargin=14mm,botmargin=13mm,leftmargin=18mm,rightmargin=17mm,
+headheight=5mm,headsep=5mm,footskip=7mm,cropmarks,nopagenumbers]{zwpagelayout}
+
+
+\renewcommand\thefigure
+     {\rm\bfseries\ifnum \c@chapter>\z@ \thechapter.\fi \@arabic\c@figure}
+\makeatother
+
+\usepackage{epsfig}
+
+\input epsf
+\input macros
+
+\usepackage{float}
+\floatstyle{plain}
+\floatplacement{Figure}{H}
+
+
+\begin{document}
+
+\begin{multicols}{2}
+\setlength{\columnseprule}{.5pt}
+\input dictionary
+\end{multicols}
+
+\end{document}

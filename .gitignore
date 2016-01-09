@@ -1,0 +1,7 @@
+*.log
+*.tex~
+*.aux
+*.ind
+/figures
+*.dvi
+*.ps
