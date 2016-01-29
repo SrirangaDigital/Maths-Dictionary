@@ -28,13 +28,50 @@ headheight=5mm,headsep=5mm,footskip=7mm,cropmarks,nopagenumbers]{zwpagelayout}
 
 \begin{document}
 
+\input title
+\newpage
+\input 001
+\mainmatter
+
 \begin{multicols}{2}
 \setlength{\columnseprule}{.5pt}
 \input dictionary
+\end{multicols}
 \newpage
+\phantom{a}~
+\thispagestyle{empty}
+\newpage
+~\phantom{a}
+\thispagestyle{empty}
+\vfill
+\begin{center}
+{\Huge\bf pAriBASika padakoVsha}
+\end{center}
+\vfill\eject
+\phantom{a}~
+\thispagestyle{empty}
+\newpage
+\begin{multicols}{2}
 \input padakosha
 \end{multicols}
-\appendix
+\newpage
+~\phantom{a}
+\thispagestyle{empty}
+\newpage
+~\phantom{a}
+\thispagestyle{empty}
+\vfill
+\begin{center}
+{\fontsize{30pt}{32pt}\selectfont\bf anubaMdhagaLu}
+\bigskip
+\bigskip
+
+{\bf\eng{\Huge APPENDICES}}
+\end{center}
+\vfill\eject
+\phantom{a}~
+\thispagestyle{empty}
+\newpage
 \input appendix
 
 \end{document}
