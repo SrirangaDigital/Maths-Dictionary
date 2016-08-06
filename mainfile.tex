@@ -2,18 +2,23 @@
 \usepackage{nudi}
 \usepackage{amsmath}
 \usepackage{txfonts,multicol,array,multirow,cancel,longtable,fancybox,rotating}
-\usepackage{steinmetz,enumitem}
+\usepackage{steinmetz,enumitem,lscape}
 \setlength{\columnsep}{.7cm}
+
+%\usepackage{fancyhdr}
 
 \allowdisplaybreaks
 
-\usepackage[papersize={180mm,240mm},textheight=215mm,textwidth=105mm,
-topmargin=14mm,botmargin=13mm,leftmargin=18mm,rightmargin=17mm,
-headheight=5mm,headsep=5mm,footskip=7mm,cropmarks,nopagenumbers]{zwpagelayout}
+\usepackage[papersize={140mm,215mm},textwidth=105mm,textheight=172mm,
+topmargin=14mm,botmargin=14mm,leftmargin=18mm,rightmargin=17mm,
+headheight=5mm,headsep=5mm,footskip=5mm,nopagenumbers]{zwpagelayout}
 
+%\usepackage[papersize={180mm,240mm},textheight=215mm,textwidth=105mm,
+%topmargin=14mm,botmargin=13mm,leftmargin=18mm,rightmargin=17mm,
+%headheight=5mm,headsep=5mm,footskip=7mm,cropmarks,nopagenumbers]{zwpagelayout}
 
 \renewcommand\thefigure
-     {\rm\bfseries\ifnum \c@chapter>\z@ \thechapter.\fi \@arabic\c@figure}
+{\rm\bfseries\ifnum \c@chapter>\z@ \thechapter.\fi \@arabic\c@figure}
 \makeatother
 
 \usepackage{epsfig}
@@ -25,7 +30,6 @@ headheight=5mm,headsep=5mm,footskip=7mm,cropmarks,nopagenumbers]{zwpagelayout}
 \floatstyle{plain}
 \floatplacement{Figure}{H}
 
-
 \begin{document}
 
 \input title
@@ -33,13 +37,8 @@ headheight=5mm,headsep=5mm,footskip=7mm,cropmarks,nopagenumbers]{zwpagelayout}
 \input 001
 \mainmatter
 
-\begin{multicols}{2}
 \setlength{\columnseprule}{.5pt}
 \input dictionary
-\end{multicols}
-\newpage
-\phantom{a}~
-\thispagestyle{empty}
 \newpage
 ~\phantom{a}
 \thispagestyle{empty}
@@ -51,12 +50,7 @@ headheight=5mm,headsep=5mm,footskip=7mm,cropmarks,nopagenumbers]{zwpagelayout}
 \phantom{a}~
 \thispagestyle{empty}
 \newpage
-\begin{multicols}{2}
 \input padakosha
-\end{multicols}
-\newpage
-~\phantom{a}
-\thispagestyle{empty}
 \newpage
 ~\phantom{a}
 \thispagestyle{empty}

@@ -2,41 +2,48 @@
 
 \pretolerance=9999
 
-\def\eng#1{{\fontfamily{txr}\fontsize{12}{14}\selectfont #1}}
+\def\eng#1{{\fontfamily{txr}\fontsize{11}{13}\selectfont #1}}
 
 \newcounter{num}
 \def\entry{\bgroup\noindent\hangindent=0.5cm\hangafter=1\setcounter{num}{0}\ignorespaces}
 \def\endentry{\egroup\par\medskip}
 
-\def\word#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{14pt}{14pt}\selectfont\bf #1}\thinspace:\markboth{#1}{#1}}\relax
-\def\engword#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{14pt}{14pt}\selectfont\bf \eng{#1}}\thinspace:\markboth{\eng{#1}}{\eng{#1}}}\relax
+\def\word#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{13pt}{13pt}\selectfont\bf #1}\thinspace:\markboth{#1}{#1}}\relax
+\def\engword#1{\noindent\hangindent=.32cm\hangafter=1{\fontsize{12pt}{12pt}\selectfont\bf \eng{#1}}\thinspace:\markboth{\eng{#1}}{\eng{#1}}}\relax
 \def\gl#1{{\bfseries \eng{(#1)}.}}
-\def\kanmng#1{{\bfseries #1.}}
-
+\def\kanmng#1{{#1.}}
 
 
 %%%%%%%%%%%%%%%
-\long\def\mng#1{#1\par}
-\long\def\newmng#1{\noindent\hangindent=0.35cm\hangafter=0 #1\par}
+\long\def\mng#1{#1\par}\relax
+\long\def\newmng#1{\noindent\hangindent=0.35cm\hangafter=0 #1\par}\relax
 %%%%%%%%%%%%%%%
-
-\renewcommand\chaptermark[1]{}
-\renewcommand\sectionmark[1]{}
 
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
-\fancypagestyle{plain}{%
-\lhead[]{}%
-\rhead[]{}%
-\chead[]{}%
-\cfoot[]{}
-
-\lhead[\bf\small\rightmark]{\bf\small\rightmark}
-\rhead[\bf\small\leftmark]{\bf\small\leftmark}
-\chead[]{}
-\cfoot[{\small\rm\thepage}]{{\small\rm\thepage}}}
-
-
+\renewcommand{\footrulewidth}{0pt}
 \pagestyle{fancy}
+\lfoot[]{}
+\cfoot[\thepage]{\thepage}
+\rfoot[]{}
+\lhead[\sl{\rightmark}]{\sl{\rightmark}}
+\rhead[\sl{\leftmark}]{\sl{\leftmark}}
+\fancypagestyle{plain}{%
+\fancyhf{}
+\cfoot[\thepage]{\thepage}}
 
+%\renewcommand\chaptermark[1]{}
+%\renewcommand\sectionmark[1]{}
 
+%\usepackage{fancyhdr}
+%\renewcommand{\headrulewidth}{0pt}
+%\fancypagestyle{plain}{%
+%\lhead[]{}%
+%\rhead[]{}%
+%\chead[]{}%
+%\cfoot[]{}
+
+%\rhead[\bf\small\rightmark]{\bf\small\rightmark}
+%\lhead[\bf\small\leftmark]{\bf\small\leftmark}
+%\chead[]{}
+%\cfoot[{\small\rm\thepage}]{{\small\rm\thepage}}}
